@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZTech-Informática</title>
+    <meta name="descriptopn" content="Mantenha Seu Computador Rápido e Protegido, Sem Surpresas!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+
+</head>
+<body>
+    <header> 
+        <a href="index.html"></a>
+        <nav>
+            <!-- Implementar o button no lugar da tag a -->
+            <nav>
+                <button class="nav-button" data-target="#inicio">Início</button>
+                <button class="nav-button" data-target="#sobre">Sobre</button>
+                <button class="nav-button" data-target="#agendamento">Agendamento</button>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <img src="img/5027845_analytics_graph_online_statistics_icon.png" alt="Imagem Principal" width="400" height="200" loading="eager">
+
+            <div>
+                <h1>Seja Bem-Vindo a ZTech!</h1>
+                <h2>Mantenha Seu Computador Rápido e Protegido, Sem Surpresas!</h2>
+                <p class="paragrafo">Quer evitar dores de cabeça com travamentos, lentidão ou falhas inesperadas no seu PC? Nossa manutenção preventiva garante que seu computador esteja sempre funcionando como novo, protegendo seus dados e aumentando sua vida útil. Realizamos verificações periódicas, eliminamos vírus, otimizamos o desempenho e prevenimos problemas antes que eles aconteçam. Seja para pessoas que usam o computador para estudos e games ou para quem depende dele no trabalho ou dia a dia, estamos aqui para cuidar do que é importante para você. Agende sua manutenção e navegue com tranquilidade!</p>
+
+                <button class="botao" onclick="window.open('https://wa.me/5524992116527', '_blank')">Agende já sua visita técnica!</button>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2>Cuidado garantido nas mãos de quem entende!</h2>
+            <p class="paragrafo">Somos especializados em manutenção preventiva de computadores, garantindo que seu PC funcione de forma rápida e segura. Nossa equipe realiza checagens periódicas, identifica e soluciona problemas antes que eles ocorram, além de otimizar o desempenho do sistema. Oferecemos um serviço completo por delivery, indo até você para realizar a manutenção, seja em casa ou no trabalho. Atendemos quem precisa do computador no dia a dia, seja para estudo, trabalho, entretenimento ou outras atividades. Com nossa manutenção, você evita dores de cabeça e mantém seu PC sempre protegido e eficiente, sem precisar sair de casa!</p>
+            <button class="botao" onclick="window.open('https://wa.me/5524992116527', '_blank')">Disponibilidade na sua região?</button>
+        </section>
+
+        <section id="agendamento" class="agendamento">
+            <div class="title">
+
+                <h2>Por que escolher a ZTech-Informática?</h2>
+                <div class="on">
+                  <ul>
+                    <li>Serviços de alta qualidade</li>
+                    <li>Equipe especializada</li>
+                    <li>Suporte técnico 24/7</li>
+                  </ul>
+                </div>
+            </div>
+                
+            
+            <button class="botao" onclick="window.open('https://wa.me/5524992116527', '_blank')">Faça já o seu agendamento!</button>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>Tecnologia com excelência, soluções com confiança: ZTech, onde a eficiência encontra inovação!</p>
+        </div>
+
+        <div>
+            <strong id="titulo">Links rápidos</strong>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#agendamento">Agendamento</a>
+            </nav>
+        </div>
+
+        <div>
+            <strong id="titulo">Encontre-nos</strong>
+            
+            
+            <p>
+                <a href="https://wa.me/5524992116527" target="_blank">
+                    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+                </a>
+            </p>
+            <p>
+                <a href="mailto:inaciofilho.silva@gmail.com">
+                    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" alt="Gmail">
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        Desenvolvido por <a href="https://www.instagram.com/jao.inacio/" target="_blank">@jao.inacio</a>
+    </div>
+
+    <script>
+        const navButtons = document.querySelectorAll('.nav-button');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const target = document.querySelector(button.dataset.target);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+
+        // Adiciona um evento de clique ao título
+        document.querySelector('.title h2').addEventListener('click', function() {
+            const title = document.querySelector('.title');
+            title.classList.toggle('ativa');  // Alterna a classe "ativa"
+        });
+    </script>
+</body>
+</html>
